@@ -43,6 +43,7 @@ const Post = () => {
             type='text'
             id='username'
             value={username}
+            placeholder='Enter your username...'
             onChange={(e) => setUsername(e.target.value)}
             required
           />
@@ -52,11 +53,12 @@ const Post = () => {
           <textarea
             id='content'
             value={content}
+            placeholder='Enter your comment here...'
             onChange={(e) => setContent(e.target.value)}
             required
           ></textarea>
         </div>
-        <button type='submit'>Post Comment</button>
+        <button className='post-btn' type='submit'>Post Comment</button>
       </form>
     </div>
   );

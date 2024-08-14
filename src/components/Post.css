@@ -14,14 +14,14 @@
     --navbar-background: #1c1c1c;
     --bottomBar-background: #1c1c1c;
     --card-colour: #2a2a2a;
-    --post-button: white;
+    --post-button: white;    
   }
 
 .post {
    
     /* border: 1px solid #ddd; */
-    min-width: 90%;
-    
+    min-width: 85%;
+    min-height: 80%;
     border-radius: 8px;
     margin: 20px;
 
@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: center;
+    /* align-items: center; */
   }
   
   h3 {
@@ -57,19 +57,21 @@
     background-color: var(--navbar-background);
     color: var(--text-color);
     outline: none;
+    
   }
   
   textarea {
-    resize: vertical;
+    outline: none;
     min-height: 100px;
+    resize: none;
   }
   
-  button {
+  .post-btn {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     background-color: var(--post-button);
-    color: var(--card-colour);
+    color: var(--background-color);
     cursor: pointer;
     transition: background-color 0.2s;
   }

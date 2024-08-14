@@ -96,16 +96,46 @@
   }
   
   .replyCard {
-    background-color: var(--card-colour);
-    border: 1px solid #333;
+    border: 1px solid var(--card-colour); 
+    border-radius: 8px;     
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background-color: var(--background-color); 
     border-radius: 8px;
     margin-bottom: 5px;
     padding: 10px;
     transition: background-color 0.3s, color 0.3s;
   }
+
+  .reply{
+    font-size: 13px;
+    color: #888;
+    margin-top: 10px;
+  }
+
+  .replyCard__header {
+    display: flex;          
+    align-items: center;    
+    margin-bottom: 12px;
+    /* border: 1px solid #9f2b2b; */
+    height: 30px;
+  }
+  
+  .replyCard__header img {
+    border-radius: 50%;     
+    width: 30px;            
+    height: 30px;          
+    object-fit: cover;      
+    margin-right: 12px;    
+  }
+  
+  .commentCard__header__text {
+    flex: 1;              
+  }
+  
   
   .replyCard__body p {
     margin: 0;
+    font-size: 13px;
   }
   
   .replyCard__footer {
@@ -122,10 +152,44 @@
     cursor: pointer;
     margin-left: 5px;
     padding: 6px 10px;
-    font-size: 0.8em;
+    font-size: 0.6em;
     transition: background-color 0.2s;
   }
   
   .replyCard__footer button:hover {
     background-color: var(--bottomBar-background);
+  }
+
+  .reply-form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .disabled{
+    display: none;
+  }
+  
+  .deleteConfirm {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .deleteConfirm button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--post-button);
+    color: var(--background-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  textarea {
+    width: 100%;
+    min-height: 60px;
+    margin-bottom: 10px;
   }
